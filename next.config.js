@@ -2,8 +2,8 @@
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
-    output: 'export',
-    assetPrefix: './',
+    //output: 'export',
+    //assetPrefix: './',
 }
    
   module.exports = nextConfig
