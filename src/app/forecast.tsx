@@ -1,6 +1,6 @@
 const Forecast = () => {
     return(
-        <div className="bg-white w-full h-[33%] border-solid rounded-md relative m-[2%]"><h1>S</h1></div>
+        <div className="bg-white w-full h-[33%] border-solid rounded-md relative my-[2%]"><h1>S</h1></div>
     );
 }
 
