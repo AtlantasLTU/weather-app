@@ -1,20 +1,13 @@
-import dynamic from 'next/dynamic';
 import Header from "./header";
 import Main from "./main";
 import Footer from "./footer";
 
 export default function Home() {
-  const DynamicDimensionsComponent = dynamic(() => import('./autoWH') as Promise<{default: React.ComponentType}>, {
-    ssr: false,
-  });
-
   return (
-    <div>
-      <DynamicDimensionsComponent>
+    <div className={`w-screen h-screen first-letter flex flex-wrap absolute`} id="main">
         <Header/>
         <Main/>
         <Footer/>
-      </DynamicDimensionsComponent>
     </div>
   )
 }
