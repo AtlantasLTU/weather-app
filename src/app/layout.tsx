@@ -1,7 +1,7 @@
 import './globals.css'
-import {Figtree} from 'next/font/google';
+import {Inter} from 'next/font/google';
 
-const font = Figtree({subsets: ['latin']});
+const font = Inter({subsets: ['latin']});
 
 export const metadata = {
   title: 'Weather app',
