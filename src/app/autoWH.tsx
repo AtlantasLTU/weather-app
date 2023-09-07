@@ -1,28 +1,30 @@
-/*import { GetServerSideProps } from "next";
+"use client"
+import React, { useEffect } from 'react';
 
-interface HomeProps {
-  windowWidth: number;
-  windowHeight: number;
+interface DynamicDimensionsProps {
+  classNameLocal: string;
 }
 
-export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
-  let windowWidth = 0;
-  let windowHeight = 0;
+const DimensionsComponent: React.FC<DynamicDimensionsProps> = ({ classNameLocal }) => {
+  useEffect(() => {
+    const handleResize = () => {
+      const element = document.getElementById('main');
+      if (element) {
+        element.classList.replace("w-screen", `w-[${window.innerWidth}px]`);
+        element.classList.replace("h-screen", `h-[${window.innerHeight}px]`);
+      }
+    };
 
-  if (typeof window !== "undefined") {
-    // Calculate window width and height on the client side
-    windowWidth = window.innerWidth;
-    windowHeight = window.innerHeight;
-  } else {
-    // Calculate window width and height on the server side (example values)
-    windowWidth = 1200; // Replace with your server-side logic
-    windowHeight = 800; // Replace with your server-side logic
-  }
+    handleResize(); // Set initial dimensions
 
-  return {
-    props: {
-      windowWidth,
-      windowHeight,
-    },
-  };
-};*/
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize); // Cleanup event listener
+    };
+  }, []);
+
+  return <div className={`w-[${window.innerWidth}px] h-[${window.innerHeight}px] first-letter flex flex-wrap absolute`} id="main" />;
+};
+
+export default DimensionsComponent;
