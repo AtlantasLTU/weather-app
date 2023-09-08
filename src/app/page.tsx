@@ -29,10 +29,10 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={`w-[${width}px] h-[${height}px] first-letter flex flex-wrap absolute`} id="main">
+    <div className={`w-[${width}px] h-[${height}px] first-letter flex-col flex`} id="main">
       <Header />
       <Main />
       <Footer />
-      </div>
+    </div>
   );
 }

@@ -1,7 +1,7 @@
 const Footer = () => {
     return(
-        <footer className="relative w-full h-[4%] bg-primary">
-            <div>
+        <footer className="w-full h-[4%] bg-primary flex flex-col relative order-[2]">
+            <div className="w-full h-full">
                 <h2></h2>
             </div>
         </footer>
