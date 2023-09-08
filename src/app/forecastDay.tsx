@@ -1,3 +1,4 @@
+"use client";
 import {TiWeatherCloudy} from 'react-icons/ti';
 
 const ForecastDay = (props: any) => {

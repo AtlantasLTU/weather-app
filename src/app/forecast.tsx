@@ -1,3 +1,4 @@
+"use client";
 import ForecastDay from "./forecastDay";
 
 const Forecast = (props: any) => {

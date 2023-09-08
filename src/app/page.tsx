@@ -5,6 +5,7 @@ import Main from './main';
 import Footer from './footer';
 
 export default function Home() {
+  /*
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(0);
 
@@ -27,12 +28,12 @@ export default function Home() {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-
+*/
   return (
     <div className={`w-[${width}px] h-[${height}px] first-letter flex-col flex`} id="main">
-      <Header />
-      <Main />
-      <Footer />
+      <Header/>
+      <Main/>
+      <Footer/>
     </div>
   );
 }
